@@ -1,0 +1,91 @@
+<!--페이지 따라하기(board)-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <link rel="stylesheet" href="./board.css">
+    </head>
+
+    <body>
+    <div id="board-box">    
+        <form action="" method="get"> <!--method="get"하고 각 항목에 name값 추가해서 등록하면 name값이 주소에 생김.-->
+            <!--게시판선택-->
+            <div class="form-group">
+                <label for="fo-selec" class="form-title">게시판선택</label>
+                <select id="fo-selec">
+                    <option selected="selected">선택해주세요</option>
+                    <option>공지사항</option>
+                    <option>가입인사</option>
+                    <optio>자유게시판</optio>
+                    <option>취업게시판</option>
+                </select>
+            </div>
+            <!--//게시판선택-->
+            
+            <!--
+                <br>은 줄바꿈 태그니까 이걸로 내리는 게 아니라 각 항목을 <div>로 묶어서 한 줄 차지하게 만들면서 내림.
+                코드가 길어질 수 있기 때문에 보기 편하게 각 항목을 주석으로 표시함.
+            -->
+
+            <!--제목-->
+            <div class="form-group">
+                <label for="fo-title" class="form-title">제목</label>
+                <input type="text" name="f-title" placeholder="제목을 입력해 주세요" id="fo-title" class="form-title-size">
+            </div>
+            <!--//제목-->
+
+            <!--비밀번호-->
+            <div class="form-group">
+                <label for="fo-pw" class="form-title">비밀번호</label>
+                <input type="password" name="f-name" placeholder="비밀번호를 입력하세요" id="fo-pw">
+            </div>
+            <!--//비밀번호-->
+
+            <!--공개범위 | 일관적인 규칙을 찾아내서 직관적인 작명하는 게 중요. rdo-loginUSer-->
+            <div class="form-group">
+                <span class="form-title">공개범위</span>
+                <label for="fo-me">본인<input type="radio" name="scope" id="fo-me" class="form-check"></label>
+                <label for="fo-loginUser">로그인회원<input type="radio" name="scope" id="fo-loginUser" class="form-check"></label>
+                <label for="fo-friend">친구<input type="radio" name="scope" id="fo-friend" class="form-check"></label>
+                <label for="fo-all">전체<input type="radio" name="scope" id="fo-all" checked="checked" class="form-check"></label>
+            </div>
+            <!--//공개범위-->
+
+            <!--허용범위 chk-like-->
+            <div class="form-group">
+                <span class="form-title">허용범위</span>
+                <label for="fo-comment">댓글허용<input type="checkbox" name="permit" id="fo-comment" checked="checked" class="form-check"></label>
+                <label for="fo-re">답글허용<input type="checkbox" name="permit" id="fo-re" class="form-check"></label>
+                <label for="fo-like">좋아요허용<input type="checkbox" name="permit" id="fo-like" class="form-check"></label>
+            </div>
+            <!--//허용범위-->
+
+            <!--텍스트-->
+            <div class="form-group">
+                <textarea class="form-text">내용을 써주세요</textarea>
+            </div>
+            <!--//텍스트-->
+
+            <!--첨부파일 | 만약 파일 버튼에 다른 디자인을 적용해야 한다면 다른 방식으로 해야 됨.-->
+            <div class="form-group">
+                <span class="form-title">첨부파일</span>
+                <input type="file">
+            </div>
+            <!--//첨부파일-->
+
+            <!--버튼-->
+            <div class="form-bt">
+                <button type="submit" class="bt">등 록</button> <!--submit : 값을 서버로 넘김 button : 다른 프로그램 작동시킴-->
+                <button type="reset" class="bt">초기화</button>
+            </div>
+            <!--//버튼-->
+        </form>
+    </div>    
+
+    </body>
+
+</html>

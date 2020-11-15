@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5</title>
+    </head>
+    <body>
+        <p>목차</p>
+        <ol>
+            <li><a href="./ex01.html" target="_blank">h1-h6 태그</a></li>
+            <li><a href="./ex02.html" target="_blank">p br hr strong em</a></li>
+            <li><a href="./ex03.html" target="_blank">ol ul 리스트</a></li>
+            <li><a href="./ex04.html" target="_blank">img a 태그</a></li>
+            <li><a href="./ex05.html" target="_blank">table tr td 태그</a></li>
+            <li><a href="./ex06.html" targrt="_blank">테이블 가로세로 합치기 연습문제</a></li>
+            <li><a href="./ex07.html" targrt="_blank">table 2 (thead, tbody, tfoot)</a></li>
+            <li><a href="./ex08.html" targrt="_blank">테이블 종합 연습문제</a></li>
+            <li><a href="./ex09.html" targrt="_blank">div span 태그</a></li>
+            <li><a href="./ex10.html" targrt="_blank">form 태그</a></li>
+        </ol>
+
+        <hr>
+        <h1>html5</h1>
+        <h2>10. form 태그</h2>
+
+        <!--입력에 쓰는 태그를 통틀어 form이라고 함.
+            입력양식을 만드는 식으로 진행.
+            회원가입 같은 입력양식인데 화면엔 안 나타나도 꼭 필요함.-->
+        <form action="" method="">
+            <!--부가정보는 '속성=값'으로 나타내는데 form에는 기본적으로
+                개발할 때 action과 method가 필요함.
+                *action : 아이디나 비번 같은 정보를 받으면 이걸 저장할(사용자컴X) 프로그램 등의 주소를 넣음.
+                *method : 입력된 정보를 받는 방식 2가시(get, post) 중 1택.-->
+            <label for="id">아이디 : </label><input type="text" id="id" placeholder="아이디">
+            <!--
+                *input : 인라인. 속성값 type이 기본. 값이 정해져 있어서 잘 알고 써야 됨.
+                *value : 값을 정해주고 싶을 때 실제값으로 이용하는데 사용자다 원하는 내용 써서 저장하면 그 내용이 넘어옴. 근데 주관식이 아닌 입력값은 사용자에게서 입력값을 받을 때 value값이 있으면 이 값으로 받게 됨.
+                *name : 데이터에 name을 정하면 사용자한테서 넘어오는 데이터에 그릇을 정할 수 있음. 이거 안 정하면 아이디 비번 섞어서 넘어오니까.
+                *placeholder : 가상의 값 지정. value대신 사용 가능.-->
+            <!--text, password, hidden(사용자한테 안 보여야 되는데 값을 넣을 칸이 필요할 때 사용.), file(파일첨부), radio(1택), checkbox(여러개택)-->
+            <!--그밖에 email, number, search, date, month, week, color 등은 브라우저에 따라 안 될 수도 있어서 신중하게 사용.
+                버튼은 submit, reset.-->    
+            <button type="button">중복체크</button>
+            <br>
+            <label for="pw">비밀번호 : </label><input type="password" value="123" id="pw"> 
+            <!--label : 칸이 아닌 텍스트를 눌러도 해당 칸이 클릭된 것처럼 연동시켜줌.
+                        해당 텍스트 등을 라벨로 묶고 라벨 안에서 for로 임의로 이름 짓고 해당 input칸에 id로 그 이름을 추가해서 연동.
+                        코드 위치상 옆에 있다고 연동되는 게 아니라 for로 묶여 있는 거임.-->
+            <br>
+
+            <input type="file">
+            <!--*이 모양은 브라우저마다 달라서 나중에 디자인 맞춰야 됨.
+                *file에 value값 넣으면 정해진 파일을 사용자컴에서 빼올 수도 있기 때문에 보안을 위해 이 속성에는 value가 작동 안 함.
+                *예전에는 익스플로어를 많이 썼지만 개발자는 크롬 개발자도구가 편하게 돼 있어서 크롬을 선호함.-->
+
+            <br>
+            <!--일반버튼과 button태그(button태그 이용할 것!)-->
+            <input type="button" value="등록">
+            <button type="button">등록</button>
+            <!--꾸미기, 위치 바꾸기는 디자인 영역.-->
+            <!--둘 다 같은 모양으로 나오지만 후자를 추천함.
+                value값에는 문자만 쓸 수 있지만 버튼 태그에는 다른 태그를 써서 이미지 등 여러가지로 확장할 수 있기 때문.-->
+            <button type="button">우편번호 찾기</button>
+            <!--팝업 띄우기, 아이디 중복체크 등 다른 기능 실행에 type="button" 이용.-->
+           
+            <br><br>
+            
+            <!--체크박스 스터디-->
+            <!--label의 이름이 다 같으면 체크박스 하나만 선택됨.-->
+            <!--*체크박스 항목이 뭐에 포함되는지 표시하기 위해 name, value로 그릇, 이름을 정함.
+                *예시 보여주기로 미리 체크해놓기(체크된 상태가 기본값) : checked="checked" 속성값 씀.-->
+            <label for="bo">독서</label><input type="checkbox" name="hobby" id="bo" checked="checked">
+            <label for="mu">음악</label><input type="checkbox" name="hobby" id="mu">
+            <label for="tr">여행</label><input type="checkbox" name="hobby" id="tr">
+            <br>
+            <label for="do">개</label><input type="checkbox" name="animal" id="do">
+            <label for="ca">고양이</label><input type="checkbox" name="animal" id="ca">
+            <label for="bi">새</label><input type="checkbox" name="animal" id="bi">
+
+            <br><br>
+            <!--과일, 달을 각 그룹끼리 하나만 선택되게 하려면 그룹을 나눠줘야 됨. : 
+                name 필수. 위에서는 데이터 전송 그릇으로 썼는데 여기서는 그룹을 나타내는 걸로 씀. 
+                코드 위치 상관없이 같은 name으로 묶이면 같은 그룹인 거.-->
+            <label for="ap">사과</label><input type="radio" name="fruit" id="ap" checked="checked">
+            <label for="pe">배</label><input type="radio" name="fruit" id="pe">
+            <label for="or">오렌지</label><input type="radio" name="fruit" id="or">
+            <br>
+            <label for="ja">1월</label><input type="radio" name="month" id="ja">
+            <label for="fe">2월</label><input type="radio" name="month" id="fe">
+            <label for="ma">3월</label><input type="radio" name="month" id="ma">
+            
+            <br>
+
+            <!--select 스터디-->
+            <!--radio로 대체 가능하지만 공간절약을 위해 이용.-->
+            <select>
+                <option>선택해주세요</option>
+                <option>SKT</option>
+                <option>KT</option>
+                <option>LG</option>
+                <option selected="selected">알뜰통신</option>
+                <!--미리 속성값. selected라고만 써도 돌아가지만 태그 안 속성은 속성=값 문법을 명확하게 쓰는 게 좋음.-->
+            </select>
+            <!--모든 선택지는 선택-submit될 경우 보여지는 선택지가 아니라 그 안에 지정된 value값을 보내게 됨.-->
+            
+            <br><br>
+
+            <textarea>하고 싶은 말을 써주세요</textarea>
+            <!--이 태그 안에서는 주석도 그냥 다 출력됨.
+                상자크기는 css로 꾸밈. 미리 어떤 걸 써놓고 싶으면 value가 아니라 여닫태그 사이에 써야 됨.
+                문자 시작할 때 바짝 붙여서 시작하고 싶으면 태그 옆에 붙여 써야 되고, 태그 사이에 공백 있으면 공백 인식해서 같이 출력됨.-->
+
+            <br><br>
+
+            <!--form에서 데이터 전송 버튼-->
+            <button type="submit">전송하기</button>
+            <button type="reset">초기화</button>
+            <!--
+                *submit : (폼에 있는/받은)데이터를 보냄. 그냥 버튼과 용도 다름. 
+                        submit 누르면 주소가 바뀌는데 받은 데이터를 action 주소로 보내게 됨.
+                        근데 아직 암것도 안 써 있어서 일단 갖고 있는 거.
+                *reset : 입력창 내용 초기화.
+            -->
+        </form>
+
+    </body>
+</html>

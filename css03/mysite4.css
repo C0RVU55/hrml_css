@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input,
+fieldset, legend, p, select, table, th, td, tr, textarea, button, form
+{margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
+
+body{
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+#wrapper{
+    width: 1000px;
+    margin: 0px auto;
+}
+
+/*
+    border: 1px solid #000000;
+*/
+
+/*clearfix*/
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after{display: block; content: ''; line-height: 0;}
+.clearfix:after{clear: both;}
+
+/*링크처리*/
+a:link{color: #000000; text-decoration: none;}
+a:visited{color: #000000; text-decoration: none;}
+a:active{color: #000000; text-decoration: none;}
+a:hover{color: #000000; text-decoration: none;}
+
+/*블릿*/
+ul{
+    list-style-type: none;
+}
+
+/*레이아웃*/
+#header{
+    background-color: #ffffff;
+    border-bottom: 1px solid #bfbfbf;}
+#nav{
+    background-color: #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+#contents{
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+#footer{
+    background-color: #bfbfbf;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/*header*/
+#header h1{
+    font-size: 50px;
+    color: #4e29f0;
+    float: left;
+    padding: 15px 0px 15px 0px;
+}
+
+#header>h1>a:link{text-decoration: none; color: #4e29f0;}
+#header>h1>a:visited{text-decoration: none; color: #4e29f0;}
+#header>h1>a:active{text-decoration: none; color: #4e29f0;}
+#header>h1>a:hover{text-decoration: none; color: #4e29f0;}
+
+#header #login{
+    float: right;
+    margin-top: 40px;
+}
+#header #login>a{
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+/*nav*/
+#nav ul{
+    width: 800px;
+    margin: 0px auto;
+    text-align: center;
+}
+#nav ul>li{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    margin: 15px 0px 15px 0px;
+}
+
+/*contents-sign*/
+.title-gap{
+    display: inline-block;
+    width: 80px;
+}
+
+#contents form>div{
+    padding: 5px 0px 5px 0px;
+}
+
+#contents #title>input[type="text"]{width: 500px;}
+
+#rd-scope>input[type="radio"]{margin-right: 10px;}
+#chk-scope>input[type="checkbox"]{margin-right: 10px;}
+
+#contents div>textarea{
+    width: 585px;
+    height: 300px;
+}
+
+#contents form>#write-btn-box{
+    border-top: 1px solid #bfbfbf;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0px 0px 0px;
+}
+#write-btn-box>button{padding: 5px 10px 5px 10px;}

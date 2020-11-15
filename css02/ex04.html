@@ -1,0 +1,111 @@
+<!--게시판 리스트 만들기-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            /*머리 | 코드는 구성 방향은 중구난방이 아니라 밖에서 안으로.*/ 
+            #TB thead{background-color: #bfbfbf;}
+            
+            /*게시판 모양*/
+            #TB{
+                text-align: center;
+                max-width: 900px;
+                min-width: 450px;
+                border: 0.5px solid #808080;
+                border-collapse: collapse; /*칸 사이의 공간 삭제.*/
+            }
+            #TB th,td{ /*머리랑 몸의 선색은 달라질 거 같지 않으면 합치는 거고 아님 따로 빼기.*/
+                border: 0.5px solid #808080; /*사실 table은 칸이 붙어 있는 게 아니라 따로 떨어져 있고 그 칸의 사방에 선을 넣어 준 거임...그래서 칸 사이의 공간을 합쳐야 됨.*/
+            } /*table>thead>tr>th, table>tbody>tr>td*/
+            #TB>thead>tr{font-weight: 800;} /*table>tbody>tr>tb*/
+
+            /*정렬*/
+            .left{text-align: left;} /*다 센터 맞추고 아닌 것만 좌측정렬 클래스 삽입.*/
+
+            /*마우스 효과*/
+            #TB tbody>tr:hover{background-color: #ffff00;}
+
+        </style>
+    </head>
+
+    <body>
+        <h1>mysite</h1>
+        <h2>게시판</h2>
+        <h3>일반게시판</h3>
+        <h4>리스트</h4>
+
+        <table id="TB">
+            <colgroup> <!--너비 900px 줬으니까 900px에 맞춰야 함.-->
+                <col style="width: 50px;"> 
+                <col style="width: 450px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+                <col style="width: 100px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>조회수</th>
+                    <th>작성일</th>
+                    <th>관리</th>
+                </tr>
+            </thead>
+        
+        <tbody>
+            <tr>
+                <td>123</td>
+                <td class="left">내일 금요일!!!</td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td class="left">내일 금요일!!!</td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td class="left">내일 금요일!!!</td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td class="left">내일 금요일!!!</td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td class="left">내일 금요일!!!</td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+        </tbody>
+
+        </table>
+
+        
+
+    </body>
+
+</html>

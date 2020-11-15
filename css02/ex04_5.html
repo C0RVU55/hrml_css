@@ -1,0 +1,116 @@
+<!--과제 : 03.css3 ppt 10페이지 만들기.-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            body{border: 1px solid #000000;}
+            #TB{
+                width: 900px;
+                max-width: 900px;
+                min-width: 450px;
+                border-collapse: collapse;
+                text-align: center;
+                
+
+            }
+
+            /*헤더*/
+            #TB thead{
+                background-color: #bfbfbf;
+                border-top: 2px solid #474646;
+                border-bottom: 2px solid #474646
+            }
+
+            /*몸통*/
+            /*.under{border: 2px dotted #474646;}
+            .F-under{border: 2px solid #474646;}*/
+            
+            #TB tbody>tr>td{
+                border-bottom: 2px dotted #474646;
+            }
+            /*tr은 border-collapse: collapse;일 때만 border가 적용됨.*/
+
+            #TB tbody{border-bottom: 2px solid #474646;}
+            /*table>tbody>tr.last{border-bottom: 2px solid #474646;}
+                아니면 그냥 tr.last{}여도 됨. 딱 이 방법만 있는 건 아니지만
+                이런 전략을 세우는 게 중요함.*/
+
+            /*마우스 효과*/
+            #TB tbody>tr:hover{
+                background-color: #ffff00;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>mysite</h1>
+        <h2>게시판</h2>
+        <h3>일반게시판</h3>
+        <h4>리스트</h4>
+
+        <table id="TB">
+            <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>조회수</th>
+                <th>작성일</th>
+                <th>관리</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>111</td>
+                <td><a href="./ex04.html">게시판 게시글입니다.</a></td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td><a href="./ex04.html">게시판 게시글입니다.</a></td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td><a href="./ex04.html">게시판 게시글입니다.</a></td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td><a href="./ex04.html">게시판 게시글입니다.</a></td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td><a href="./ex04.html">게시판 게시글입니다.</a></td>
+                <td>이다현</td>
+                <td>1111</td>
+                <td>YYMMDD</td>
+                <td>수정 삭제</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        
+
+    </body>
+
+</html>

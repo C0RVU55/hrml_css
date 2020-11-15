@@ -1,0 +1,100 @@
+<!--마이페이지 만들기3 : 회원가입-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <link rel="stylesheet" href="./mysite4.css">
+    </head>
+
+    <body>
+    <div id="wrapper">
+        <!--헤더-->
+        <div id="header" class="clearfix">
+            <h1><a href="./index.html">MySite</a></h1>
+            <div id="login">
+                <a href="">로그인</a>
+                <a href="./index3_signin.html">회원가입</a>
+            </div>
+        </div>
+        <!--헤더-->
+
+        <!--네비-->
+        <div id="nav" class="clearfix">
+            <ul>
+                <li><a href="">입사지원서</a></li>
+                <li><a href="./index2.html">게시판</a></li>
+                <li><a href="">갤러리</a></li>
+                <li><a href="">방명록</a></li>
+            </ul>
+        </div>
+
+    <!--컨텐츠 : 회원가입-->
+    
+    <div id="contents">
+        <form action="" method="">
+            <div>
+                <span class="title-gap">게시판선택</span>
+                <select>
+                    <option>선택해주세요</option>
+                    <option>일반게시판</option>
+                    <option>댓글게시판</option>
+                    <option>첨부게시판</option>
+                </select>
+            </div>
+
+            <div id="title">
+                <span class="title-gap">제목</span>
+                <input type="text" name="title" placeholder="제목을 입력해주세요">
+            </div>
+
+            <div>
+                <span class="title-gap">패스워드</span>
+                <input type="text" name="write-pw" placeholder="패스워드를 입력해주세요">
+            </div>
+            
+            <div id="rd-scope">
+                <span class="title-gap">공개범위</span>
+                <label for="me">본인</label><input type="radio" name="scope" id="me">
+                <label for="login-user">로그인회원</label><input type="radio" name="scope" id="login-user">
+                <label for="fri">친구</label><input type="radio" name="scope" id="fri">
+                <label for="all">전체</label><input type="radio" name="scope" id="all" checked="checked">
+            </div>
+
+            <div id="chk-scope">
+                <span class="title-gap">허용범위</span>
+                <label for="comment">댓글허용</label><input type="checkbox" name="permit" id="comment" checked="checked">
+                <label for="re">답글허용</label><input type="checkbox" name="permit" id="re">
+                <label for="like">좋아요허용</label><input type="checkbox" name="permit" id="like">
+            </div>
+
+            <div>
+                <textarea></textarea>
+            </div>
+
+            <div>
+                <span class="title-gap">첨부파일</span>
+                <input type="file">
+            </div>
+
+            <div id="write-btn-box">
+                <button type="submit">등 록</button>
+                <button type="reset">초기화</button>
+            </div>
+        </form>
+    </div>
+            
+
+        <!--푸터-->
+        <div id="footer">
+            copy right @ 2020 이다현 All Right Reserved
+        </div>
+        
+    
+    </div>
+    </body>
+
+</html>

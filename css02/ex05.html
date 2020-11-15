@@ -1,0 +1,56 @@
+<!--border-radius : 모서리 둥글게 만들기-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            /*위치마다 둥글게.*/
+            .round{
+                border: 1px solid #000000;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                /*순서 보더-위아래-좌우*/
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }       
+            /*한번에 둥글게.*/     
+            .all-round{
+                border: 1px solid #000000;
+                border-radius: 10px;
+            }
+            /*다른 표기법 : 좌측상단부터 시계방향으로 시작.*/
+            .all-round2{
+                border: 1px solid #000000;
+                border-radius: 10px 20px 30px 40px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="round">
+            라운드적용<br>
+            라운드적용<br>
+            라운드적용
+        </div>
+        <br>
+        <div class="all-round">
+            라운드적용<br>
+            라운드적용<br>
+            라운드적용
+        </div>
+        <br>
+        <div class="all-round2">
+            라운드적용<br>
+            라운드적용<br>
+            라운드적용
+        </div>
+
+    </body>
+
+</html>

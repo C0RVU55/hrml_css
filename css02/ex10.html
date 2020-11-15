@@ -1,0 +1,63 @@
+<!--
+    padding : 영역과 컨텐츠 사이의 공간
+    margin : 컨텐츠와 바깥 사이의 공간, 컨텐츠 간의 공간
+    *{margin:0; padding:0;} : px, &, em 3가지 단위 많이 쓰고 브라우저마다 기본 margin, padding값이 다 달라서
+    초기화해주는 게 레이아웃 잡기 편함.
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            .box1{
+                width: 300px;
+                border: 1px solid #000000; /*rgb는 같은 글자는 한번만 써도 되긴 한데 잘 안 씀. #000000=#000*/
+                background-color: #2ed2e7;
+            }
+            .box2{
+                width: 300px;
+                border: 1px solid #000000;
+                background-color: #2ed2e7;
+                padding: 10px;
+                /*
+                패딩값만큼 사방 공간이 늘어나서 컨텐츠 영역 자체도 늘어남.
+                하나만 쓰면 사방에 적용되고 원하는 곳만 적용하려면 top-right-bottom-left 시계방향.
+                10px 50px 2개만 쓰는 경우는 위아래-좌우 적용.
+                padding-top 이런 식으로 써도 됨.
+                */
+            }
+            .box3{
+                width: 300px;
+                border: 1px solid #000000;
+                background-color: #2ed2e7;
+                padding: 10px 20px 30px 40px;
+                margin: 10px 10px 10px 10px;
+                /*크롬 개발자도구로 테스트 가능*/
+            }
+            .box4{
+                width: 300px;
+                border: 1px solid #000000;
+                background-color: #2ed2e7;
+                padding: 10px 20px;
+                margin: -30px 10px;
+            }
+            /*<br>로 띄어 썼는데 이제는 마진으로 구분 가능.
+            두 컨텐츠가 margin으로 떨어져 있을 때 누구 margin인지 헷갈리면 개발자도구로 확인 가능.
+            음수 넣으면 겹쳐짐. 색, 선 없으면 컨텐츠끼리 겹침.*/
+        </style>
+    </head>
+
+    <body>
+
+        <div class="box1">css에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.</div>
+        <div class="box2">css에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.</div>
+        <div class="box3">css에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.</div>
+        <div class="box4">css에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.</div>
+
+    </body>
+
+</html>

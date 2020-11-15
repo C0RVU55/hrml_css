@@ -1,0 +1,66 @@
+<!--
+    박스모델 : width height 단위 % or px
+    요샌 반응형 웹이라 창 줄이면 내용물도 같이 줄어드는데 그 크기를 정하는 거?
+-->
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            .box-red{
+                width: 400px;
+                height: 60px; /*가로세로 안 주면 기본이 한 줄. 창 늘어나면 늘어나는대로 다 차지함.*/
+                background-color: #ff0000;
+            }
+
+            .box-blue{
+                width: 700px;
+                height: 80px;
+                background-color: #0000ff;
+            }
+
+            .span-red{
+                display: block; /*크기 변경 가능하지만 위치 조절 불가능 : 이래서 inline-block 사용함.*/
+                width: 500px;
+                height: 70px;
+                background-color: #ff0000;
+            }
+            .span-blue{
+                display: inline-block; /*블록과 인라인의 장점만 가져옴. / 기본값 inline-block 요소 : form 관련 태그, img*/
+                width: 100px;
+                height: 70px;
+                background-color: #0000ff;
+
+            } /*크롬 f12>element>style에서 크기 조절해 볼 수 있음. 테스트용이라 실제로는 반영 안 됨.
+                (user agent stylesheet은 브라우저가 주는 기본값이라는 뜻.*/
+
+            .img-profile{
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="box-red">css에서 div 가로 세로 어떻게 적용되는지 확인해 보곘습니다.</div>
+        <div class="box-blue">css에서 div 가로 세로 어떻게 적용되는지 확인해 보곘습니다.</div>
+        <p class="box-blue">css에서 div 가로 세로 어떻게 적용되는지 확인해 보곘습니다.</p>
+
+        <span class="span-red">개</span> 
+        <!--인라인은 가로세로 지정해도 안 먹음. 내용물만큼이 그 크기임. display 써서 인라인을 블록으로 취하면 가능.-->
+        <span class="box-blue">고양이</span>
+        <span class="span-blue">새</span>
+        <img class="img-profile" src="./img/star.jpg" alt="star">
+        <!--이미지는 인라인인데 클래스 적용됨. 예외적인 경우라 display로 안 바꾸고 걍 크기 바꾸기도 함.-->
+
+        <button class="box-red">저장</button> <!--개발도구로 검색해보면 button은 기본이 인라인블록임.-->
+        
+
+
+    </body>
+
+</html>

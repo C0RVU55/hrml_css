@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5</title>
+    </head>
+
+    <body>
+        <p>목차</p>
+        <!--10/21 오늘 배운 내용을 목차로 만들고 링크 걸기-->
+        <!--링크는 난 처음에 브라우저 주소창에서 복붙했는데 이러면 다른 컴에서 안 될 가능성이 높기 때문에
+        파일경로를 넣어야 함. 절대 또는 상대 중 하나로 통일시키는 게 좋음.-->
+        <ol>
+            <li><a href="./ex01.html" target="_blank">h1-h6 태그</a></li>
+            <li><a href="./ex02.html" target="_blank">p br hr strong em</a></li>
+            <li><a href="./ex03.html" target="_blank">ol ul 리스트</a></li>
+            <li><a href="./ex04.html" target="_blank">img a 태그</a></li>
+            <li><a href="./ex05.html" target="_blank">table tr td 태그</a></li>
+            <li><a href="./ex06.html" targrt="_blank">테이블 가로세로 합치기 연습문제</a></li>
+            <li><a href="./ex07.html" targrt="_blank">table 2 (thead, tbody, tfoot)</a></li>
+            <li><a href="./ex08.html" targrt="_blank">테이블 종합 연습문제</a></li>
+            <li><a href="./ex09.html" targrt="_blank">div span 태그</a></li>
+            <li><a href="./ex10.html" targrt="_blank">form 태그</a></li>
+        </ol>
+        
+        <hr>
+
+        <h1>html5</h1>
+        <h2>3. ol ul 리스트</h2>
+        <h3>신입사원 채용 절차</h3>
+        <!--리스트 만들기 전 순서가 필요한 일인지 아닌지 고려해서 ol(ordered list) 또는 ul(unordered list)를 정함.-->
+        <ol>
+            <li>입사지원</li> <!--리스트는 꼭 li(list item)과 함께 써야 하고 기본적으로 블록 요소임.-->
+            <li>서류전형</li>
+            <strong><li>1차 면접</li></strong>
+            <li>적성검사</li>
+            <li>최종면접</li>
+            <li>신체검사</li>
+        </ol>
+
+        <h3>신입사원 채용 절차(이중목록)</h3> <!--계속 안쪽으로 목록 생성 가능.-->
+        <ol>
+            <li>입사지원
+                <ul>
+                    <li>이력서</li>
+                    <li>자기소개서</li>
+                    <li>경력기술서</li>
+                </ul>
+            </li>
+            <li>서류전형</li>
+            <li>1차 면접</li>
+            <li>적성검사</li>
+            <li>최종면접</li>
+            <li>신체검사</li>
+        </ol>
+
+        <h3>풀스택 교육과정</h3>
+        <ul>
+            <li>리스트 태그는 웹페이지에서 메뉴 항목을 나타낼 때 쓰이기도 함.</li>
+            <li><em>HTML</em></li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JAVA</li>
+            <li>Oracle</li>
+            <li>Spring Framwork</li>
+        </ul>
+
+        <hr>
+        
+        <h3>시작 순서</h3>
+        <ol>
+            <li>먼저 독타입 설정</li>
+            <li>html 태그</li>
+            <li>머리와 몸통 달아주고 머리에 제목(title) 붙이기</li>
+            <li>html 태그에 언어 설정(lang="ko")하고 머리에는 메타데이터 문자세트(meta charset="UTF-8") 설정</li>
+            <li>몸통에 원하는 내용 쓰기</li>
+        </ol>
+        <ul>
+            <li>이거는 순서가 없어도 됨</li>
+            <li>그냥 목록 쓸 때 쓰는 그거</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!--
+    float의 문제 및 해결법
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            #back{
+                width: 500px;
+                background-color: #ff0000;
+            }
+
+            #box1{
+                width: 100px;
+                height: 100px;
+                background-color: #0000ff;
+                float: left;
+            }
+
+            #box2{
+                width: 100px;
+                height: 100px;
+                background-color: #00ff00;
+                float: left;
+            }
+
+            #box3{
+                width: 500px;
+                background-color: #ffff00;
+            }
+
+            /*clearfix : 배경(알맹이에 따라 가변적인 거)에 클래스 넣으면 높이를 가진 것처럼 됨.*/
+            .clearfix{*zoom:1;}
+            .clearfix:before, .clearfix:after{display: block; content: ''; line-height: 0;}
+            .clearfix:after{clear: both;}
+
+            /*
+            해결법1 : back에 height 부여하기. 근데 텍스트양이 얼마나 될지 모르기 때문에 높이를 고정해야 되면 소용없음.
+            해결법2 : clear: both 쓰기. 공중에 뜨는 흐름을 끊어버림. 그래서 아래에 다른 div를 배치할 순 있지만 배경은 씹힘.
+            해결법3 : 배경 박스에 overflow: hidden 넣기. 꼼수라 조금 불안함.
+            해결법4 : clearfix 코드(추천!)
+            */
+        </style>
+    </head>
+
+    <body>
+
+        <div id="back" class="clearfix"> 
+            <!--바깥 div는 알맹이 사이즈에 따라 늘었다 줄었다 함.
+                근데 알맹이를 float 해버리면 바깥 div가 인식을 못해서 0px 됨.-->
+            <div id="box1">파란박스</div>
+            <div id="box2">초록박스</div>
+        </div>
+
+        <div id="box3">노란박스</div>
+
+    </body>
+
+</html>

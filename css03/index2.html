@@ -1,0 +1,144 @@
+<!--마이페이지 만들기2-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <link rel="stylesheet" href="./mysite2.css">
+    </head>
+
+    <body>
+    <div id="wrapper">
+        <!--헤더-->
+        <div id="header" class="clearfix">
+            <h1><a href="./index.html">MySite</a></h1>
+            <div id="login">
+                <a href="">로그인</a>
+                <a href="./index3_signin.html">회원가입</a>
+            </div>
+        </div>
+        <!--헤더-->
+
+        <!--네비-->
+        <div id="nav" class="clearfix">
+            <ul>
+                <li><a href="">입사지원서</a></li>
+                <li><a href="./index2.html">게시판</a></li>
+                <li><a href="">갤러리</a></li>
+                <li><a href="">방명록</a></li>
+            </ul>
+        </div>
+
+    <!--컨텐츠-->
+    <div id="contents" class="clearfix"> 
+            <div id="aside">
+                <h2>게시판</h2>
+                <ul>
+                    <li><a href="">일반 게시판</a></li>
+                    <li><a href="">댓글 게시판</a></li>
+                    <li><a href="">첨부 게시판</a></li>
+                </ul>
+            </div>            
+            
+            <div id="contents-main">
+                <div id="main1" class="clearfix">
+                    <h3>일반게시판</h3>
+                    <div id="main1-route">
+                        <ul>
+                            <li>홈</li>
+                            <li>게시판</li>
+                            <li class="r-last">일반게시판</li>
+                        </ul>
+                    </div>
+                </div>
+            
+
+                <div id="main2" class="clearfix">
+                    <div id="main2-search">
+                        <input type="text" name="search">
+                        <button type="submit">검색</button> 
+                    </div>
+                </div>
+
+                <div id="main3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>글쓴이</th>
+                                <th>조회수</th>
+                                <th>작성일</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table-last">
+                            <tr>
+                                <td>1111</td>
+                                <td><a href="">11111111111111111111</a></td>
+                                <td>이다현</td>
+                                <td>1111</td>
+                                <td>YYMMDD</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>1111</td>
+                                <td><a href="">11111111111111111111</a></td>
+                                <td>이다현</td>
+                                <td>1111</td>
+                                <td>YYMMDD</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>1111</td>
+                                <td><a href="">11111111111111111111</a></td>
+                                <td>이다현</td>
+                                <td>1111</td>
+                                <td>YYMMDD</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>1111</td>
+                                <td><a href="">11111111111111111111</a></td>
+                                <td>이다현</td>
+                                <td>1111</td>
+                                <td>YYMMDD</td>
+                                <td>삭제</td>
+                            </tr>
+                            <tr>
+                                <td>1111</td>
+                                <td><a href="">11111111111111111111</a></td>
+                                <td>이다현</td>
+                                <td>1111</td>
+                                <td>YYMMDD</td>
+                                <td>삭제</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="main4">
+                    <div id="main4-num">
+                    ◀ 1 2 3 4 5 6 7 8 9 10 ▶
+                    </div>
+
+                    <a href="./index4_write.html">글쓰기</a>
+                </div>
+            </div>
+        </div>
+            
+
+        <!--푸터-->
+        <div id="footer">
+            copy right @ 2020 이다현 All Right Reserved
+        </div>
+        
+    
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/******공통******/
+/*여백 초기화*/
+body, div, ul, li, dl, dt, ol, h1, h2, h3, h4, h5, h6, input,
+fieldset, legend, p, select, table, th, td, tr, textarea, button, form{margin: 0px; padding: 0px;}
+
+body{
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+/*공통으로 작업해야 될 게 생기면 위쪽에 추가하는 식*/
+a:link{text-decoration: none; color: #000000;}
+a:visited{text-decoration: none; color: #000000;}
+a:active{text-decoration: none; color: #000000;}
+a:hover{text-decoration: none; color: #000000;}
+
+/*clearfix*/
+.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after{display: block; content: ''; line-height: 0;}
+.clearfix:after{clear: both;}
+
+/*블릿 안 씀*/
+ul, ol{
+   list-style-type: none; 
+}
+
+/*레이아웃*/
+/*아래 4개를 묶어서 너비 정하고 한번에 같이 조절함.*/
+#wrapper{
+    width: 1000px;
+    margin: 0px auto; /*가운데 위치. 상하는 0, 좌우는 auto.*/
+}
+
+#header{
+    background-color: #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+#nav{
+    background-color: #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+#contents{
+    background-color: #ffffff;
+    padding: 30px;
+}
+#footer{
+    background-color: #bfbfbf;
+    text-align: center;
+    padding: 10px; 
+    /*고정된 영역이기 때문에 높이 지정해도 되는데 나중에 내용 추가되면
+    늘여줘야 되니까 padding 정해두면 내용 추가하면 저절로 늘어남.*/
+}
+
+
+/*header*/
+#header>h1{
+    font-size: 50px;
+    color: #4e29f0;
+    float: left; /*이런 경우는 고정이라 헤더 div에 높이 정해줘도 됨.*/
+    margin: 15px 0px 15px 0px;
+}
+
+#header>h1>a:link{text-decoration: none; color: #4e29f0;}
+#header>h1>a:visited{text-decoration: none; color: #4e29f0;}
+#header>h1>a:active{text-decoration: none; color: #4e29f0;}
+#header>h1>a:hover{text-decoration: none; color: #4e29f0;}
+
+#header-btnbox{
+    float: right; /*하나씩 띄우면 순서가 바뀌니까 묶어서 띄우는 게 좋음.*/
+    margin-top: 40px;
+}
+#header-btnbox>a{
+    font-size: 15px; /*걍 위에 넣어도 되는데 엄격하게 하자면 이럼.*/
+    margin-left: 15px;
+}
+
+/*nav | 처음에 ul에 id 주고 했는데 안 먹음. ul도 볼록이긴 한데 div에 적용되는 게 안 먹는듯.*/ 
+#nav ul{
+    width: 800px;
+    margin: 0px auto;
+}
+#nav>ul>li{
+    width: 200px;
+    /*list-style-type: none; 블릿 계속 안 쓸 거면 초반에 넣는 게 나음.*/
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; /*각 리스트에 칸을 배분해주기 전엔 가운데정렬 안 먹음.*/
+    margin: 15px 0px 15px 0px;
+    /*
+    나중에 수정할 거 생각해서 메뉴를 가운데 놓는다는 느낌으로 배치할 거임.
+    4개 일일이 픽셀 맞추는 게 아니라 안의 4개를 묶어서 가운데 배치함.
+    리스트에 800 주고 한 칸이 200씩 차지하게 만듦.
+    */
+}
+
+/*contents | 작업할 게 좀 있다 싶으면 id 부여ㄱ*/
+#contents>img{
+    width: 300px;
+    height: 430px;
+    float: left;
+}
+/*
+처음에는 이미지랑 텍스트 묶음에 각각 margin값 부여했는데 그냥 <div>contents에 padding 주면 됨.
+*/
+#contents #greeting-box{
+    float: left;
+    margin: 0px 0px 20px 40px;
+}
+#contents #greeting-box #greeting{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 0px 20px 0px;
+}
+#contents #greeting-box>p{
+    margin: 0px 0px 20px 0px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5</title>
+    </head>
+
+    <body>
+        <p>목차</p>
+        <!--10/21 오늘 배운 내용을 목차로 만들고 링크 걸기-->
+        <!--링크는 난 처음에 브라우저 주소창에서 복붙했는데 이러면 다른 컴에서 안 될 가능성이 높기 때문에
+        파일경로를 넣어야 함. 절대 또는 상대경로 중 하나로 통일시키는 게 좋음.-->
+        <ol>
+            <li><a href="./ex01.html" target="_blank">h1-h6 태그</a></li>
+            <li><a href="./ex02.html" target="_blank">p br hr strong em</a></li>
+            <li><a href="./ex03.html" target="_blank">ol ul 리스트</a></li>
+            <li><a href="./ex04.html" target="_blank">img a 태그</a></li>
+            <li><a href="./ex05.html" target="_blank">table tr td 태그</a></li>
+            <li><a href="./ex06.html" targrt="_blank">테이블 가로세로 합치기 연습문제</a></li>
+            <li><a href="./ex07.html" targrt="_blank">table 2 (thead, tbody, tfoot)</a></li>
+            <li><a href="./ex08.html" targrt="_blank">테이블 종합 연습문제</a></li>
+            <li><a href="./ex09.html" targrt="_blank">div span 태그</a></li>
+            <li><a href="./ex10.html" targrt="_blank">form 태그</a></li>
+        </ol>
+        
+        <hr>
+
+        <h1>html5</h1>
+        <h2>4. img a 태그</h2>
+        <h3>이미지 링크 기본(절대경로)</h3> <!--이미지 이름과 경로는 되도록 영어로. 이미지는 인라인!!!-->
+        <img src="C:\javaStudy\workspace_front\img\ch.png" alt="청국이">
+        <br>
+        <img src="\javaStudy\workspace_front\img\ch.png" alt="청국이">
+        <!--태그 안에 부가정보(key)를 여러 개 쓸 수 있음. (속성=값 속성=값...형태로)-->
+        <!--절대경로 : 누구나 같은 기준을 가짐. 
+            시작점을 드라이브(C, D... / 리눅스는 C가 없음) 또는 절대기준점 루트(/)로 표현 또는 이미지 링크 걸기.-->
+        
+        <h3>이미지 링크(상대경로 및 상위경로)</h3>
+        <img src="./../img/ch.png" alt="청국이">
+        <br>
+        <img src="./../img/ch.png" alt="청국이" width="500px" height="500px">
+        <!--상대경로 : 내 위치(이 파일의 위치)를 기준으로 해서('이 파일의 위치를 시작점으로 한다'를 ./로 표현) 기준점이 바뀜.-->
+        <!--상위폴더 : 들어가는 건 /이고 나오는(올라가는) 거는 ../로 표현함.-->
+
+        <!--목록은 태그 안에 태그를 같이 써야 적용되고 이미지는 태그만 써서는 아무것도 안 나오고 최소한 경로값은 넣어줘야 됨.-->
+        <!--이미지 크기는 속성 태그(width, height)가 있긴 하지만 디자인 영역으로 봄. 기본 단위는 mm고 px(픽셀)을 많이 씀.-->
+        <!--속성값은 매우 많기 때문에 업무에 많이 쓰이는 것들을 파악해서 알아두는 것이 좋음.-->
+
+        <h3>a 태그</h3>
+        <a href="http://www.google.co.kr/" target="_self">구글</a>
+        <!--링크속성값 href | target="_self"가 기본값.-->
+        <!--속성 간에 순서를 지킬 필요는 없지만 일관적으로 쓰는 게 좋음.-->
+
+        <p>
+            대한민국 포털 사이트 중 하나로 <a href="http://daum.net" target="_blank">다음</a>은 한메일이라는 이름으로
+            대한민국 최초의 웹 메일 서비스를 열었다.
+        </p>
+        
+        <p>
+            대한민국 포털 사이트 중 하나로 
+            <a href="http://daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="다음로고" width="120px" height="70px">
+            </a>은 한메일이라는 이름으로 대한민국 최초의 웹 메일 서비스를 열었다.
+            <!--문자 대신 이미지에 링크 삽입. 사실 이미지 사이즈는 여기말고 css에서 조절함.-->
+            <!--a 태그 사이에 들여쓰기는 관계를 명확하게 하기 위함.-->
+        </p>
+
+    </body>
+
+</html>

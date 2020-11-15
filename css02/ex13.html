@@ -1,0 +1,84 @@
+<!--
+    float 응용 메뉴 만들기 (13 14 15 합침)
+-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            body, div{margin: 0; padding: 0;}
+            #m1 li{
+                list-style-type: none;
+                border: 1px solid #000000; /*크기 확인을 위한 선*/
+                float: left; /*right는 순서까지 우측정렬*/
+                margin: 0px 10px 0px 10px 
+                /*
+                다닥다닥 붙기 때문에 간격 띄우기. 처음에는 padding 했는데 margin이 나음.
+                앞으로 변할 가능성을 고려해서 골라야 함. 강사 경험상 리스트-메뉴 이런 거엔 margin이 낫다고 함.
+                디자인에 맞춰 padding, margin값 및 위치 계산해야 됨.
+                */
+            }
+
+            #m2 li{
+                list-style-type: none;
+                float: left;
+                /*border: 1px solid #000000;*/
+                border-right: 2px solid #000000;
+
+                background: #ffffff url(./img/star.jpg) no-repeat scroll left center;
+                background-size: 11px 11px;
+
+                padding: 0px 30px 0px 10px;
+                margin-right: 30px;
+            }
+            #m2>.m2-Rside{border-right: none;} /*표가 2개라 그런지 바로 안 먹고 id 써줘야 먹음.*/
+
+            #m3 li{
+                list-style-type: none;
+                float: left;
+                margin-right: 10px;
+                /*border: 1px solid #000000;*/
+            }
+            #m3 li:after{content: "   >";}
+            #m3>.m3-Rside:after{content: "";} /*이런 식으로 내용 안 넣을 수 있음.*/
+        </style>
+    </head>
+
+    <body>
+        <!--리스트를 다 띄워서 위치시키고 띄워서 위치시키는 식으로.
+        리스트 태그의 의미는 살리고 디자인적으로 꾸밈.-->
+        <ol id="m1">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li>메뉴5</li>
+        </ol>
+
+        <br>
+
+        <ol id="m2">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li class="m2-Rside">메뉴5</li>
+        </ol>
+
+        <br>
+
+        <ol id="m3"> <!--사이트 경로 breadcrumb 빵부스러기-->
+            <li>홈</li>
+            <li>게시판</li>
+            <li>일반게시판</li>
+            <li class="m3-Rside">리스트</li>
+        </ol>
+
+
+    </body>
+
+</html>

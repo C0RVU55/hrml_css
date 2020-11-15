@@ -1,0 +1,51 @@
+<!--버튼 만들기-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            .bt{
+                width: 100px;
+                border-radius: 5px;
+                text-align: center;
+                cursor: pointer;
+            }
+            .grey{
+                border: 1px solid #a6a6a6;
+                background-color: #bfbfbf;                
+            }
+            .grey:hover{
+                border: 1px solid #404040;
+                background-color: #808080;
+            }
+            .red{
+                border: 1px solid #f47383;
+                background-color: #f8a1a4;
+            }
+            .red:hover{
+                border: 1px solid #77070b;
+                background-color: #b21016;
+            }
+            /*처음에는 저장, 삭제버튼을 따로 만들었는데
+            해설은 공통점과 각 특징을 구분해서 클래스 적용함.
+            같은 버튼을 다른 색과 텍스트로 만들어야 될 상황을 가정하면서 클래스를 지정해야 됨.*/
+        </style>
+    </head>
+
+    <body>
+        <!--button태그에 클래스 넣어봤는데 div랑 좀 다르긴 해도 디자인 적용됨.-->
+        <form>
+            <button type="button" class="bt grey">저장</button>
+        </form>
+
+        <div class="bt grey">저장버튼</div>
+        <br>
+        <div class="bt red">삭제버튼</div>
+
+    </body>
+
+</html>

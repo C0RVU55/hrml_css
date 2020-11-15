@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--표는 head, body, foot으로 세분화할 수 있고 어디에 써야한다 정해졌다기 보단 사람들이 많이 쓰는 쪽으로 자주 써 봐야 됨.
+    이런 거 표시 안 했다고 표가 틀어지진 않지만 의미상 잘했다고 볼 수 있음.
+    *head : 기본값. 고정되는 부분.
+    *body : 가변 데이터 부분.
+    *foot : 합계, 총정리 등. 보통 합계는 잘 없고 있더라도 게시판으로 만들지만 알아는 두기.-->
+
+<!--thead는 가로로 돼 있는 건 한번에 묶을 수 있는데 
+    세로로 된 경우에는 thead로 계속 묶어주진 않고 tbody 안에 해당 칸만 <th></th> 쓰면 됨.-->
+
+<!--들여쓰기는 단축키 영역 지정 후 tab, 반대는 shift+tab.-->
+
+<html lang="ko">
+    <head>
+        <meta charset="ko">
+        <title>html5</title> 
+    </head>
+
+    <body>
+        <p>목차</p>
+        <ol>
+            <li><a href="./ex01.html" target="_blank">h1-h6 태그</a></li>
+            <li><a href="./ex02.html" target="_blank">p br hr strong em</a></li>
+            <li><a href="./ex03.html" target="_blank">ol ul 리스트</a></li>
+            <li><a href="./ex04.html" target="_blank">img a 태그</a></li>
+            <li><a href="./ex05.html" target="_blank">table tr td 태그</a></li>
+            <li><a href="./ex06.html" targrt="_blank">테이블 가로세로 합치기 연습문제</a></li>
+            <li><a href="./ex07.html" targrt="_blank">table 2 (thead, tbody, tfoot)</a></li>
+            <li><a href="./ex08.html" targrt="_blank">테이블 종합 연습문제</a></li>
+            <li><a href="./ex09.html" targrt="_blank">div span 태그</a></li>
+            <li><a href="./ex10.html" targrt="_blank">form 태그</a></li>
+        </ol>
+        
+        <hr>
+
+        <h1>html5</h1>
+        <h2>7. table 2 (thead, tbody, tfoot)</h2>
+
+        <table border="1">
+            <!--원래 크기는 css에서 하는데 가로 폭을 정리하기 위해 조절은 미리 해둠.
+                <col style=""> 이게 기본 문법이고 style 시트에서 빌려오는 거라 일단은 외우기.
+                td 수만큼 지정해야 되고 안 그러면 지맘대로 되는 부분 있음.
+                
+                병합되는 칸 있으면 정해진 크기 합해서 나옴. 
+                그래서 처음에 정할 때 병합 칸 고려해서 tr 수만큼 크기 다 정해줘야 됨.-->
+            <colgroup>
+                <col style="width: 25%"> <!--퍼센트 또는 nnpx;-->
+                <col style="width: 15%">
+                <col style="width: 20%">
+                <col style="width: 20%">
+                <col style="width: 20%">
+            </colgroup>
+
+            <!--%로도 정할 수 있는데 합 100% 맞춰야 됨. 
+                이걸로 정하면 브라우저 줄어들 때 표도 같이 줄어듦.(픽셀은 안 줄어듦.)-->
+            
+            <caption>제주특별자치도 학교현황</caption><!--캡션 잘 안 쓰고 p태그로 많이 쓴다고 함.-->
+            
+            <thead>
+            <tr>
+                <th>구분</th> <!--thead 줄임말-->
+                <th>학교수</th>
+                <th>학급수</th>
+                <th>학생수</th>
+                <th>교원수</th>
+            </tr>
+            </thead>
+
+        <tbody>
+            <tr>
+                <th>유치원</th>
+                <td>177</td>
+                <td>252</td>
+                <td>5547</td>
+                <td>474</td>
+            </tr>
+            <tr>
+                <th>초등학교</th>
+                <td>111</td>
+                <td>1720</td>
+                <td>37686</td>
+                <td>2632</td>
+            </tr>
+            <tr>
+                <th>중학교</th>
+                <td>44</td>
+                <td>699</td>
+                <td>21274</td>
+                <td>1412</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td>272</td>
+                <td>2671</td>
+                <td>64507</td>
+                <td>4518</td>
+            </tr>
+        </tfoot>
+
+        </table>
+    </body>
+</html>

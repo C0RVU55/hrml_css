@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+body, div, span, label, select, input, button, form{margin: 0px; padding: 0px;}
+
+body{
+    font-family: "맑은 고딕";
+    font-size: 12px;
+}
+
+#sign-box{
+    width: 600px;
+}
+
+/*줄*/
+.sign-form{
+    border-bottom: 1px solid #bfbfbf;
+}
+
+/*!!!제목 간격!!! : 인라인블록으로 바꿔서 크기 정하는 거 까먹지 말기*/
+.sign-gap{
+    display: inline-block;
+    width: 80px;
+    padding: 10px 0px 10px 5px;
+    /*border: 1px solid #000000;*/
+}
+
+/*주소*/
+.ad-gap{
+    margin-bottom: 10px;
+    width: 450px;
+}
+.ad-gap2{
+    display: inline-block;
+    width: 80px;
+    padding: 5px 0px 10px 5px;
+}
+
+/*선택지 간격*/
+.sign-chek{
+    margin-right: 10px;
+}
+
+/*소개*/
+.sign-intro{
+    vertical-align: top;
+}
+.sign-intro-text{
+    margin: 10px 0px 10px 0px;
+    width: 450px;
+    height: 150px;
+}
+
+/*버튼*/
+.sign-bt{
+    margin-top: 10px;
+    text-align: center;
+}
+.sign-bt-ds{
+    width: 65px;
+    padding: 5px 10px 5px 10px;
+}

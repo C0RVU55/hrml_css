@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5</title>
+
+    </head>
+    <body>
+        <p>목차</p>
+        <!--10/21 오늘 배운 내용을 목차로 만들고 링크 걸기-->
+        <!--링크는 난 처음에 브라우저 주소창에서 복붙했는데 이러면 다른 컴에서 안 될 가능성이 높기 때문에
+        파일경로를 넣어야 함. 절대 또는 상대 중 하나로 통일시키는 게 좋음.-->
+        <ol>
+            <li><a href="./ex01.html" target="_blank">h1-h6 태그</a></li>
+            <li><a href="./ex02.html" target="_blank">p br hr strong em</a></li>
+            <li><a href="./ex03.html" target="_blank">ol ul 리스트</a></li>
+            <li><a href="./ex04.html" target="_blank">img a 태그</a></li>
+            <li><a href="./ex05.html" target="_blank">table tr td 태그</a></li>
+            <li><a href="./ex06.html" targrt="_blank">테이블 가로세로 합치기 연습문제</a></li>
+            <li><a href="./ex07.html" targrt="_blank">table 2 (thead, tbody, tfoot)</a></li>
+            <li><a href="./ex08.html" targrt="_blank">테이블 종합 연습문제</a></li>
+            <li><a href="./ex09.html" targrt="_blank">div span 태그</a></li>
+            <li><a href="./ex10.html" targrt="_blank">form 태그</a></li>
+        </ol>
+        
+        <hr>
+        
+        <h1>html5</h1>
+        <h2>2.p br hr strong em</h2>
+
+        <hr>
+
+        <p>모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다.<br>
+            <!--br을 2번 쓰면 문단 나눈 것처럼 보이긴 하지만 확실한 의미부여 및 표현을 위해 p를 쓰는 게 좋음.-->
+            <!--p는 블록이라 한 줄을 다 차지함.-->
+        <em>국가는 재해를 예방하고 그 위험으로부터 국민을 보호하기 위하여 노력하여야 한다.</em>
+        </p>
+        <p>국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. <br>
+        국회는 국정을 감사하거나 특정한 국정사안에 대하여 조사할 수 있으며,
+        <strong>이에 필요한 서류의 제출 또는 증인의 출석과 증언이나 의견의 진술을 요구할 수 있다.</strong>
+        </p>
+        <blockquote>중앙선거관리위원회는 대통령이 임명하는 3인, 
+        국회에서 선출하는 3인과 대법원장이 지명하는 3인의 위원으로 구성한다.
+        위원장은 위원중에서 호선한다.<br>
+        (두산백과)</blockquote> 
+        <!--인용태그가 보기에는 들여쓰기로 보이지만 읽을 때는 인용구임을 밝히게 될 것이라 인용은 인용태그로 써주는 게 좋음. 블록임.-->
+
+        <!--볼드는 스트롱이랑 구분되지는 않지만 디자인 영역이라 잘 안 씀. 강조에는 스트롱을 권장함.-->
+        <!--더 강조하고 싶으면 스트롱 태그 해놓고 css에서 처리하는 게 좋음.-->
+        <!--강조 정도 : 이탤릭 < 스트롱 / 그냥 기울기 이탤릭 쓰고 싶으면 css로 처리.-->
+
+        <q>이것도 인용인데 얘는 블록이 아님.</q><br>
+        <q>'짧은 인용'이 몇 글자인지 정해지진 않았지만 인라인 요소라 줄바꿈 안 해주면 옆으로 붙어서 나옴.</q>
+
+
+    </body>
+</html>

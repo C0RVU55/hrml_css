@@ -1,0 +1,42 @@
+<!--백그라운드 이미지 background-image: url()
+    관련 속성 : background-size, background-repeat, background-position, background-attachment
+    한번에 쓸 때 순서 background: #000000 url() no-repeat fixed center center-->
+
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+        <style>
+            .mar{margin: 0;}
+            .bg-img{
+                color: #ffffff;
+                width: 1300px;
+                height: 700px;
+                background-color: #1dcfa9;
+                background-image: url(./img/back_img01.jpg);
+                background-repeat: no-repeat; /*타일처럼 패턴 깔아서 배경 연출 가능. 페이지가 얼마나 길어질지 모르기 때문에 세로길이 정하는 건 위험.*/
+                /*기본값 repeat 가로반복 repeat-x 세로반복 repeat-y*/
+                
+                background-size: auto;
+                /*auto 기본사이즈|세로 가로 순으로 사이즈 정하기|contain 가로나 세로만 맞추는 듯?|cover 채우기*/
+
+                background-position: center center;
+                /*가로(left center right) 세로(top center bottom) 순서*/
+                
+                background-attachment: scroll;
+                /*기본 scroll|이미지 고정 fixed(이거 하니까 이미지 위치가 제대로 안 되는 경우가 있음.)*/
+            }
+        </style>
+    </head>
+
+    <body class="mar">
+        <div class="bg-img">안녕하세요</div>
+        <!--img는 그냥 자리 차지하는 거고 background-image는 바탕에 깔리는 거.
+            img는 이미지가 깨지면 깨지는 표시가 나는데 bg는 표시 없어서 티 안 남.
+            의미상 필요한 건 img 의미없는 건 bg 사용.-->
+    </body>
+
+</html>
